@@ -1,20 +1,19 @@
 body {
-    background-color: #f2f2f2;  
-    font-family: Arial, sans-serif;
+background-color: #FF000000; /* دي هتخلي لون الخلفية رمادي فاتح */
+font-family: Arial, sans-serif; /* ده نوع الخط */
 }
 
 h1 {
-    color: navy; 
-    text-align: center;
+color: navy; /* ده هيخلي لون العنوان (h1) كحلي */
+text-align: center; /* هيخلي العنوان في نص الصفحة */
 }
 
 p {
-    font-size: 18px; 
-    color: #333;
+font-size: 18px; /* هيكبر خط الفقرة (p) شوية */
+color: #333; /* هيخلي لون الكلام رمادي غامق */
 }
 
 img {
-    display: block;
-    margin: auto;
-    width: 80%; /* ضفنا السطر ده عشان الصورة متطلعش برة شاشة الموبايل */
+display: block;
+margin: auto; /* الأمرين دول عشان يخلوا الصورة في النص */
 }

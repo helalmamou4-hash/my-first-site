@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <title>الموقع بتاعي</title>
-    
-    <link rel="stylesheet" href="style.css">
+    <title>الموقع بتاعي</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-            
-    <h1>أهلاً بك في موقعي الأول</h1>
 
-انا            ..زياد سليمان محمود 
-          Ziad Soliman Mahmoud
-    <p>أنا أتعلم الآن كيف أقوم بإنشاء موقع ويب.</p>
+    <h1>أهلاً بك في موقعي الأول</h1>
+             انا زياد سليمان محمود
+    <p id="myText">أنا أتعلم الآن كيف أقوم بإنشاء موقع ويب.</p>
+    
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="صورة لوجو جوجل">
+    
+    <br><br> <button onclick="changeText()">دوس هنا عشان تغير الكلام</button>
 
-    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="صورة لوجو جوجل">
+    <script>
+        function changeText() {
+            // السطر ده معناه: روح دور على العنصر اللي الـ id بتاعه "myText"
+            // وغير الكلام اللي جواه
+            document.getElementById("myText").innerHTML = "مبروك! إنت عملت أول تطبيق ويب!";
+        }
+    </script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/690e0f1b0063b91964a49dbc/1j9fem15p';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 
 </body>
 </html>
