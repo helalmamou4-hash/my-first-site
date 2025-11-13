@@ -1,19 +1,51 @@
+/* التنسيق الأساسي للجسم لتوسيط العناصر */
 body {
-background-color: #FF000000; /* دي هتخلي لون الخلفية رمادي فاتح */
-font-family: Arial, sans-serif; /* ده نوع الخط */
+    display: flex;
+    flex-direction: column; /* لترتيب العناصر فوق بعضها */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; 
 }
 
+/* تنسيق زر تنظيف السماعة */
+.main-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #3498db; /* لون أزرق جذاب */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.main-button:hover {
+    background-color: #2980b9;
+}
+
+/* تأثير عندما يكون الصوت قيد التشغيل */
+.main-button.playing {
+    background-color: #e74c3c; /* لون أحمر للتنبيه */
+    animation: pulse 1s infinite; /* إضافة اهتزاز بصري */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* تنسيق العناصر الأصلية للموقع */
 h1 {
-color: navy; /* ده هيخلي لون العنوان (h1) كحلي */
-text-align: center; /* هيخلي العنوان في نص الصفحة */
+    color: #333;
 }
 
-p {
-font-size: 18px; /* هيكبر خط الفقرة (p) شوية */
-color: #333; /* هيخلي لون الكلام رمادي غامق */
-}
-
+/* لتوسيط الصور (لوجو جوجل) */
 img {
-display: block;
-margin: auto; /* الأمرين دول عشان يخلوا الصورة في النص */
+    display: block;
+    margin: 20px auto;
 }
