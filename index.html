@@ -6,18 +6,21 @@
 </head>
 <body>
 
-    <h1>أهلاً بك في موقعي الأول</h1>
-    انا زياد سليمان محمود
-    <p id="myText">أنا أتعلم الآن كيف أقوم بإنشاء موقع ويب.</p>
-    
-    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="صورة لوجو جوجل">
-    
-    <br><br> 
-    
-    <button onclick="changeText()">دوس هنا عشان تغير الكلام</button>
+    <div class="content-container">
+        <h1>أهلاً بك في موقعي الأول</h1>
+        انا زياد سليمان محمود
+        <p id="myText">أنا أتعلم الآن كيف أقوم بإنشاء موقع ويب.</p>
+        
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="صورة لوجو جوجل">
+        
+        <br><br> 
+        
+        <button onclick="changeText()" class="action-button">دوس هنا عشان تغير الكلام</button>
+    </div>
 
-    <div style="margin-top: 50px;">
-        <button id="speakerButton" class="main-button">
+
+    <div class="speaker-section">
+        <button id="speakerButton" class="main-button blue-button">
             اضغط لبدء تنظيف السماعة
         </button>
     </div>
@@ -30,20 +33,22 @@
             document.getElementById("myText").innerHTML = "مبروك! إنت عملت أول تطبيق ويب!";
         }  
 
-        // 2. كود وظيفة تشغيل نغمة التنظيف
+        // 2. كود وظيفة تشغيل نغمة التنظيف (مع تزويد مستوى الصوت)
         const speakerButton = document.getElementById('speakerButton');
         const audio = document.getElementById('toneAudio');
 
         speakerButton.addEventListener('click', function() {
-            // تشغيل الصوت بأعلى مستوى
+            // ✅ الكود الذي يضمن رفع مستوى الصوت إلى الأقصى (1.0)
             audio.volume = 1.0; 
+            
             audio.play()
                 .then(() => {
                     speakerButton.textContent = 'جاري التنظيف... لا تغلق الصفحة';
                     speakerButton.classList.add('playing');
                 })
                 .catch(error => {
-                    alert('فشل التشغيل، تأكد من رفع مستوى الصوت يدوياً!');
+                    // هذا التنبيه يظهر بسبب قيود المتصفحات التي تحدثنا عنها
+                    alert('فشل التشغيل، تأكد من أن هاتفك ليس على وضع الصامت وقم برفع مستوى الصوت يدوياً.');
                 });
             
             // إيقاف الصوت بعد 10 ثوانٍ (يمكنك تغيير المدة)
